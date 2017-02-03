@@ -6,9 +6,6 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
 
 @client.event
 async def on_message(message):
@@ -23,5 +20,7 @@ async def on_message(message):
     elif message.content.startswith('!sleep'):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
+	elif message.content.startswith('!ping')
+		client.send_message(message.channel, "I'm not saying pong.")
 
 client.run('MjY4ODQxMzUwODgxODY5ODI0.C1gpig.ao-9PcunLls7Hf7DorYp0hhHAfc')
