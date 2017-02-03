@@ -1,0 +1,8 @@
+{
+  "!Fightme": "Good one, cupcake.",
+  "!goodboy": "I'm a nice boy.",
+  "!foo": "bar!",
+  "!jason": "I am the overcorn!",
+  "!ping": "I'm not saying pong.",
+  "!commands": "!Fightme\n!goodboy\n!foo\n!jason\n!ping\n!join <Channel> -joins voice channel name\n!play <Song> -plays named song\n!playqueue -lists remaining songs in queue\n\nUse # to chat with the bot"
+}

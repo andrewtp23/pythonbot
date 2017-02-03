@@ -1,8 +1,12 @@
 import discord
 import asyncio
+import json
 
 client = discord.Client()
 
+with open('mybot.json') as json_data:
+     d = json.load(json_data)
+	 
 @client.event
 async def on_ready():
     print("I'm ready.")
@@ -21,9 +25,8 @@ async def on_message(message):
     if message.content.startswith('!sleep'):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
-		
-    if message.content.startswith('!ping'):
-        await client.send_message(message.channel, 'Not saying pong.')
-	
+
+    if d[message.content]:
+        await client.send_message(message.channel, d[message.content])
 
 client.run('MjY4ODQxMzUwODgxODY5ODI0.C1gpig.ao-9PcunLls7Hf7DorYp0hhHAfc')
